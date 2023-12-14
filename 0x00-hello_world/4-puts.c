@@ -1,5 +1,8 @@
 #include <stdio.h>
-/*This main function take no arguements and returns int*/
+/*
+ * main -  take no arguements
+ *Return: int always 0 (Success)
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
