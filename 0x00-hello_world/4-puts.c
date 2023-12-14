@@ -4,5 +4,5 @@ int main(void)
 /*This main function take no arguements and returns int*/
 {	
 	puts("\"Programming is like building a multilingual puzzle\n");
-	return (0);	
+	return(0);	
 }
