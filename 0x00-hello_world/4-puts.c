@@ -2,7 +2,7 @@
 /*This program illustrates how to use puts function*/
 int main(void)
 /*This main function take no arguements and returns int*/
-{	
-       	puts("\"Programming is like building a multilingual puzzle");
-       	return (0);	
+{
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);	
 }
