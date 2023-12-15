@@ -7,16 +7,15 @@
 int main(void)
 {
 	char i = 'a';
+	char k = 'A';
 	char j;
+	char l;
 
 	for (j = 'z'; i <= j; i++)
 	{
 		putchar(i);
 	}
-	char k = 'A';
-	char l;
-
-	for (l = 'Z'; k < l; k++)
+	for (l = 'Z'; k <= l; k++)
 	{
 		putchar(k);
 	}
