@@ -10,6 +10,6 @@ int main(void)
 {
 	const char *mes = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(1, "...mes...", 59);
+	write(2, strlen(mes), 59);
 	return (1);
 }
