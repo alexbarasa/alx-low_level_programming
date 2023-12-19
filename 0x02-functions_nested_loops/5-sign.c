@@ -9,10 +9,11 @@ int print_sign(int n)
 {
 	int p = '1';
 	int c;
+	int x = '+';
 
 	if (n > 0)
 	{
-		c = putchar('+' + p);
+		c = x + p;
 		return (c);
 	}
 	else if (n < 0)
