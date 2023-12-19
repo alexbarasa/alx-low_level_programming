@@ -8,10 +8,9 @@
 int print_sign(int n)
 {
 	int p = '1';
-	int c;
-	int b;
 
 	if (n > 0)
+	{
 		return ('+' + p);
 	}
 	else if (n < 0)
