@@ -7,17 +7,20 @@
  */
 int print_sign(int n)
 {
+	static const char positive[] = "+1";
+	static const char negative[] = "-1";
+	static const char zero[] = "00";
+
 	if (n > 0)
 	{
-		int *c = "+1";
-		return (c);
+		return (positive);
 	}
 	else if (n < 0)
 	{
-		return (-1);
+		return (negative);
 	}
 	else
 	{
-		return (0);
+		return (zero);
 	}
 }
