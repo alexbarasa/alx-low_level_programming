@@ -7,9 +7,9 @@
  */
 int print_sign(int n)
 {
-	int p = '1';
+	int p = 1;
 	int c;
-	int x = '+';
+	int x = 1;
 
 	if (n > 0)
 	{
