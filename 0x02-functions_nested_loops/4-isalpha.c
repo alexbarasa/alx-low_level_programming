@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * _islower - Checks for lower characters
+ * _isalpha - Checks for lower characters
  *
- * Return: Always 0.
+ * Return: A 0 or 1.
  * @c: A character
  */
 int _isalpha(int c)
