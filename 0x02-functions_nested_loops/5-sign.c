@@ -9,17 +9,19 @@ int print_sign(int n)
 {
 	int p = '1';
 	int c;
+	int b;
 
 	if (n > 0)
-		c = '+' + p
+		c = '+' + p;
 		return (c);
 	}
 	else if (n < 0)
 	{
-		return (negative);
+		b = '-' + p;
+		return (b);
 	}
 	else
 	{
-		return (zero);
+		return (0);
 	}
 }
