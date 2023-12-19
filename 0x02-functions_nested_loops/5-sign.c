@@ -7,14 +7,12 @@
  */
 int print_sign(int n)
 {
-	static char positive[3];
-	static char negative[3];
-	static char zero[3];
+	int p = '1';
+	int c;
 
 	if (n > 0)
-	{
-		strcpy(positive, "+");
-		return (1);
+		c = '+' + p
+		return (c);
 	}
 	else if (n < 0)
 	{
