@@ -11,7 +11,7 @@ int print_sign(int n)
 	
 	if (n < 0)
 	{
-		int v;
+		 v = n;
 		sign = -(v < 0);
 		return (sign);
 	}
