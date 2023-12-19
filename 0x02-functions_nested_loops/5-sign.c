@@ -11,7 +11,8 @@ int print_sign(int n)
 	
 	if (n < 0)
 	{
-		sign = -(int v < 0);
+		int v;
+		sign = -(v < 0);
 		return (sign);
 	}
 	else if (n > 0)
