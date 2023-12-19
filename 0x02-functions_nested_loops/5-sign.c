@@ -7,9 +7,12 @@
  */
 int print_sign(int n)
 {
-	if (-(n < 0))
+	int sign;
+	int v;
+	if (n < 0)
 	{
-		return (n);
+		sign = -(v < 0);
+		return (sign);
 	}
 	else if (n > 0)
 	{
