@@ -8,6 +8,7 @@ void print_alphabet_x10(void)
 {
 	int i, k;
 	int j = 'z';
+	i
 	k = 0;
 
 	while (k < 10)
@@ -17,5 +18,6 @@ void print_alphabet_x10(void)
 			putchar(i);
 		}
 		putchar('\n');
+		k++
 	}
 }
