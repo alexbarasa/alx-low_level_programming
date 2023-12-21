@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _isupper - Checks the uppercase alphabets
  * @c: Integer
