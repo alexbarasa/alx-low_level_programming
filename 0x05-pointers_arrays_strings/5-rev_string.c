@@ -2,12 +2,12 @@
 #include <string.h>
 int _strlen(char *str);
 /**
- * print_rev - Prints a reversed string
+ * rev_string - Prints a reversed string
  *
  * @s: Character pointer
  * Return: None
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i, j;
 	char *begin_ptr, *end_ptr, tmp;
