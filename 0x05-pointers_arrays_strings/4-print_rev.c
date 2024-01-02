@@ -22,6 +22,6 @@ void print_rev(char *s)
 		*end_ptr = *begin_ptr;
 		*begin_ptr = tmp;
 		begin_ptr++;
-		end_ptr--
+		end_ptr--;
 	}
 }
