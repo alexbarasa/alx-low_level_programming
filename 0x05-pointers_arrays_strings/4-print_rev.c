@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+int _strlen(char *str);
 /**
  * print_rev - Prints a reversed string
  *
@@ -24,4 +24,22 @@ void print_rev(char *s)
 		begin_ptr++;
 		end_ptr--;
 	}
+}
+/**
+ * _strlen - Calculates the length of a string
+ *
+ * @str: Character pointer
+ * Return: Always 0.
+ */
+int _strlen(char *str)
+{
+	int length;
+
+	length = 0;
+	while (*s != '\0')
+	{
+		length++;
+		str++;
+	}
+	return (length);
 }
