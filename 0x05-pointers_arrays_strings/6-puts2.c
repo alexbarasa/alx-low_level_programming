@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _puts - prints a string
+ * puts2 - prints a string
  *
  * @str: Character pointer
  * Return: None
