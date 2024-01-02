@@ -18,3 +18,4 @@ int _strlen(char *s)
 	}
 	putchar('\n');
 	return (length);
+}
