@@ -2,9 +2,10 @@
 /**
  * string_toupper - Converts lower case letters to upper case letters
  *
+ * @str: String pointer
  * Return: Characters.
  */
-char string_toupper(char *)
+char string_toupper(char *str)
 {
 	char *str;
 	char *original_str = str;
