@@ -5,7 +5,7 @@
  * @str: String pointer
  * Return: Characters.
  */
-char string_toupper(char *str)
+char *string_toupper(char *str)
 {
 	char *str;
 	char *original_str = str;
