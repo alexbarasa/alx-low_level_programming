@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _strcat - Function that concatinates two strings
+ * _strncat - Function that copies n strings to another string
  *
  * @dest: Destination string pointer
  * @src: source string pointer
