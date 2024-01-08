@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * *_mecpy - Copies bytes from one memory to another memory
+ * *_memcpy - Copies bytes from one memory to another memory
  *
  * @dest: Destination memory
  * @src: source memory
