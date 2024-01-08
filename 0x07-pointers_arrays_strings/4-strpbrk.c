@@ -1,7 +1,8 @@
 #include <stdio.h>
 char *_strchr(char *s, char c);
 /**
- * _strpbrk - Finds the first occurrence of any character from a specified string
+ * _strpbrk - Finds the first occurrence of any character from
+ * a specified string
  *
  * @s: String pointer
  * @accept: String pointer
