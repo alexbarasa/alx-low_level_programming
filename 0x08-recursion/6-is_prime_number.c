@@ -10,8 +10,15 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return(isPrime(n, 2));
+	return (isPrime(n, 2));
 }
+/**
+ * isPrime - Checks if a given number is prime
+ *
+ * @num: Integer to be checked
+ * @divisor: Integer divisor
+ * Return: Recursion
+ */
 int isPrime(int num, int divisor)
 {
 	if (divisor * divisor > num)
