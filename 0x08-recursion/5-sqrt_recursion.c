@@ -1,5 +1,5 @@
 #include <stdio.h>
-int test(int n);
+int test(int n, int guess);
 /**
  * _sqrt_recursion - Calculates the square root of
  * a given number.
@@ -9,34 +9,27 @@ int test(int n);
  */
 int _sqrt_recursion(int n)
 {
-	int i;
-	int k = n;
-	int j = test(k);
-
-	i = 1;
-	if (j == -1)
+	if (n < 0)
 		return (-1);
 	else if (n == 1)
 		return (1);
-	else if (j == 1 && n - i >= 0)
-	{
-		return (1 + _sqrt_recursion(n - i), i += 2);
-	}
 	else
-		return (0);
+		return (test(n, 1));
 }
-int test(int n)
+/**
+ * test - Checks if a number is a perfect square
+ * and calculates the square root of the number
+ *
+ * @n: Integer
+ * @guess: Integer
+ * Return: Square root
+ */
+int test(int n, int guess)
 {
-        int i;
-
-        i = 1;
-        while ( n > 0)
-        {
-                n -= i;
-                i += 2;
-        }
-        if (n == 0)
-                return (1);
-        else
-                return (-1);
+	if (guess * guess == n)
+		return (guess);
+	else if (guess * guess > n)
+		return (-1);
+	else
+		return (test(n, guess + 1));
 }
