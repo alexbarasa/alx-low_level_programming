@@ -1,4 +1,5 @@
 #include <stdio.h>
+int isPrime(int num, int divisor);
 /**
  * is_prime_number - Checks if a given number is prime
  *
@@ -7,14 +8,16 @@
  */
 int is_prime_number(int n)
 {
-	int i;
-
 	if (n <= 1)
 		return (0);
-	for (i = 2; i * i <= n; i++)
-	{
-		if (n % i == 0)
-			return (0);
-	}
-	return (1);
+	return(isPrime(n, 2));
+}
+int isPrime(int num, int divisor)
+{
+	if (divisor * divisor > num)
+		return (1);
+	if (num % divisor == 0)
+		return (0);
+	else
+		return (isPrime(num, divisor + 1));
 }
