@@ -39,6 +39,8 @@ int main(int argc, char **argv)
 			putchar('-');
 			product = -product;
 		}
+		if (product == 0)
+			putchar('0');
 		num = 0;
 		while (product > 0)
 		{
