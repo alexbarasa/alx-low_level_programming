@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 	if (count == 0)
 	{
 		char *e = "Error";
+
 		while (*e != '\0')
 		{
 			putchar(*e);
@@ -53,24 +54,26 @@ int main(int argc, char **argv)
 	putchar('\n');
 	return (0);
 }
-
+/**
+ * _atoi - Changes a string digit to integer
+ * @s: String pointer
+ * Return: converted string
+ */
 int _atoi(char *s)
 {
-    int result = 0;
-    int sign = 1;
+	int result = 0;
+	int sign = 1;
 
-    if (*s == '-')
-    {
-        sign = -1;
-        s++;
-    }
-
-    while (*s >= '0' && *s <= '9')
-    {
-        result = result * 10 + (*s - '0');
-        s++;
-    }
-
-    return result * sign;
+	if (*s == '-')
+	{
+		sign = -1;
+		s++;
+	}
+	while (*s >= '0' && *s <= '9')
+	{
+		result = result * 10 + (*s - '0');
+		s++;
+	}
+	return (result * sign);
 }
 
