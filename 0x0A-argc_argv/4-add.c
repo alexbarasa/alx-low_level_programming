@@ -20,17 +20,16 @@ int main(int argc, char **argv)
 		sum += _atoi(argv[i]);
 		count++;
 		if (!_is_digit(argv[i]))
-        	{
-                	char *e = "Error";
+		{
+			char *e = "Error";
 
-                	while (*e != '\0')
-                	{
-                        	putchar(*e);
-                        	e++;
-                	}
-                	putchar('\n');
+			while (*e != '\0')
+			{
+				putchar(*e);
+				e++;
+			}
+			putchar('\n');
 			return (1);
-
 		}
 	}
 	if (count == 0)
@@ -78,7 +77,7 @@ int _atoi(char *s)
 /**
  * _is_digit - Checks if a given string is a digit
  *
- * @s: Pointer string to be checked
+ * @str: Pointer string to be checked
  * Return: 1 if its digit and 0 if not
  */
 int _is_digit(char *str)
