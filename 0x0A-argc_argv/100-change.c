@@ -10,7 +10,7 @@ void print_num(int num);
  */
 int main(int argc, char **argv)
 {
-	int cents, nickels, dimes, pennies, quarters;
+	long int cents, nickels, dimes, pennies, quarters;
 
 	quarters = nickels = dimes = pennies = 0;
 	if (argc != 2)
