@@ -31,7 +31,6 @@ int main(int argc, char **argv)
 			putchar(*e);
 			e++;
 		}
-		putchar('\n');
 	}
 	else
 	{
