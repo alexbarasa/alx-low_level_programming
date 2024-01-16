@@ -1,6 +1,6 @@
 #include <stdio.h>
-int _atoi(char *s);
-void print_num(int num);
+long long int _atoi(char *s);
+void print_num(long long int num);
 /**
  * main - Entry point
  *
@@ -10,9 +10,9 @@ void print_num(int num);
  */
 int main(int argc, char **argv)
 {
-	long int cents, nickels, dimes, pennies, quarters;
+	long long int cents, nickels, dimes, pennies, quarters, rubies;
 
-	quarters = nickels = dimes = pennies = 0;
+	quarters = nickels = dimes = rubies = pennies = 0;
 	if (argc != 2)
 	{
 		char *e = "Error";
@@ -47,12 +47,17 @@ int main(int argc, char **argv)
 		cents -= 5;
 		nickels++;
 	}
+	while (cents >= 2)
+	{
+		cents -= 2;
+		rubies++;
+	}
 	while (cents >= 1)
 	{
 		cents -= 1;
 		pennies++;
 	}
-	print_num(quarters + dimes + nickels + pennies);
+	print_num(quarters + dimes + nickels + pennies + rubies);
 	return (0);
 }
 /**
@@ -60,9 +65,9 @@ int main(int argc, char **argv)
  * @s: String pointer
  * Return: converted string
  */
-int _atoi(char *s)
+long long int _atoi(char *s)
 {
-	int result = 0;
+	long long int result = 0;
 	int sign = 1;
 
 	if (*s == '-')
@@ -83,12 +88,12 @@ int _atoi(char *s)
  * @num: Integer
  * Return: Given integer
  */
-void print_num(int num)
+void print_num(long long int num)
 {
-	int div, digit, leadingZero;
+	long long int div, digit, leadingZero;
 
 	leadingZero = 1;
-	div = 10000;
+	div = 100000000;
 	while (div > 0)
 	{
 		digit = num / div;
