@@ -1,6 +1,6 @@
 #include <stdio.h>
-long long int _atoi(char *s);
-void print_num(long long int num);
+long int _atoi(char *s);
+void print_num(long int num);
 /**
  * main - Entry point
  *
@@ -10,7 +10,7 @@ void print_num(long long int num);
  */
 int main(int argc, char **argv)
 {
-	long long int cents, nickels, dimes, pennies, quarters, rubies;
+	long int cents, nickels, dimes, pennies, quarters, rubies;
 
 	quarters = nickels = dimes = rubies = pennies = 0;
 	if (argc != 2)
@@ -65,9 +65,9 @@ int main(int argc, char **argv)
  * @s: String pointer
  * Return: converted string
  */
-long long int _atoi(char *s)
+long int _atoi(char *s)
 {
-	long long int result = 0;
+	long int result = 0;
 	int sign = 1;
 
 	if (*s == '-')
@@ -88,9 +88,9 @@ long long int _atoi(char *s)
  * @num: Integer
  * Return: Given integer
  */
-void print_num(long long int num)
+void print_num(long int num)
 {
-	long long int div, digit, leadingZero;
+	long int div, digit, leadingZero;
 
 	leadingZero = 1;
 	div = 100000000;
