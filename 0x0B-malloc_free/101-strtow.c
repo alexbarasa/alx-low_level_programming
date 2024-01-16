@@ -43,6 +43,7 @@ char **strtow(char *str)
 				words[word_index][word_length] = '\0';
 				word_index++;
 				word_length = 0;
+				in_word = 0;
 			}
 		}
 		else
