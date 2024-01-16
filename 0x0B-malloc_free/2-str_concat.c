@@ -4,7 +4,7 @@ char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 /**
- * *_str_concat - Concates tow given strings
+ * *str_concat - Concates tow given strings
  *
  * @s1: Charater pointer
  * @s2: Character pointer
