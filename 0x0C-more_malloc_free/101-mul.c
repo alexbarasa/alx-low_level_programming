@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void print_error_exit();
+void print_error_exit(void);
 int _strlen(char *s);
 int _isdigit(char *c);
 void mul(char *num1, char *num2);
@@ -45,12 +45,11 @@ void mul(char *num1, char *num2)
 	{
 		digit1 = num1[i] - '0';
 		carry = 0;
-	
-		for (j = len2 -1; j >= 0; j--)
+		for (j = len2 - 1; j >= 0; j--)
 		{
 			digit2 = num2[j] - '0';
 			tmp = digit1 * digit2 + result[i + j + 1] + carry;
-			result[i + j +1] = tmp % 10;
+			result[i + j + 1] = tmp % 10;
 			carry = tmp / 10;
 		}
 		result[i] += carry;
@@ -100,10 +99,10 @@ int _strlen(char *s)
  *
  * Return: None
  */
-void print_error_exit()
+void print_error_exit(void)
 {
 	char *error = "Error";
-	
+
 	while (*error != '\0')
 	{
 		putchar(*error);
@@ -111,21 +110,4 @@ void print_error_exit()
 	}
 	putchar('\n');
 	exit(98);
-}
-int _atoi(char *s)
-{
-	int result = 0;
-	int sign = 1;
-
-	if (*s == '-')
-	{
-		sign = -1;
-		s++;
-	}
-	while (result >= '0' && result <= '9')
-	{
-		result = result * 10 + (*s - '0');
-		s++;
-	}
-	return (result * sign);
 }
