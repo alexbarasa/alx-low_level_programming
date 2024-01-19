@@ -60,6 +60,7 @@ void mul(char *num1, char *num2)
 	for (i = start_index; i < result_size; i++)
 		putchar(result[i] + '0');
 	putchar('\n');
+	free(result);
 }
 /**
  * _isdigit - Checks the uppercase alphabets
