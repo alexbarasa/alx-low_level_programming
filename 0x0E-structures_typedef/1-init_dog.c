@@ -1,5 +1,6 @@
 #include <stdio.h>
 int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
 /**
  * init_dog - Initializes variables of struct dog
  *
