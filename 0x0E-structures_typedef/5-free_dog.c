@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlin.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
  * free_dog - Clears the memory occupied by dog_t
