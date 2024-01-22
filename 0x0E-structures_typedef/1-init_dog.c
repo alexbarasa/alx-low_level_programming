@@ -3,6 +3,19 @@
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 /**
+ * struct dog - Structure to hold info about the dog
+ *
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
+ */
+typedef struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+} dog;
+/**
  * init_dog - Initializes variables of struct dog
  *
  * @d: Struct dog Pointer
