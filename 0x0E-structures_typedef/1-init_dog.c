@@ -3,6 +3,7 @@
 #include "dog.h"
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
+void free_dog(struct dog *d);
 /**
  * init_dog - Initializes variables of struct dog
  *
@@ -53,4 +54,14 @@ char *_strcpy(char *dest, char *src)
 	while ((*dest++ = *src++) != '\0')
 		;
 	return (originalDest);
+}
+/**
+ * free_dog - Frees memory allocated for struct dog
+ *
+ * @d: Struct dog Pointer
+ */
+void free_dog(struct dog *d)
+{
+	free(d->name);
+	free(d->owner);
 }
