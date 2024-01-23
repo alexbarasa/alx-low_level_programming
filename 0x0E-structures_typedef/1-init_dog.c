@@ -15,7 +15,10 @@ void free_dog(struct dog *d);
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
-		printf("Ok");
+	{
+		printf("Ok\n");
+		exit(EXIT_FAILURE);
+	}
 	d->name = malloc(_strlen(name) + 1);
 	d->owner = malloc(_strlen(owner) + 1);
 	if (d->name == NULL || d->owner == NULL)
