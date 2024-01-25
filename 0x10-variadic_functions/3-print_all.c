@@ -9,10 +9,8 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *s;
-	char c;
-	int i;
-        int j, first;
+	char *s, c;
+	int i, j, first;
 	float f;
 
 	va_start(args, format);
