@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stddef>
 /**
  * print_name - Prints the given name
  *
@@ -7,5 +8,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (f != NULL)
+		f(name);
 }
