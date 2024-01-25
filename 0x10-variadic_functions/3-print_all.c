@@ -9,43 +9,39 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *s, c;
-	int i, j, first;
-	float f;
+	char *s;
+	int i;
+	/*float f;*/
 
 	va_start(args, format);
-	first = 1;
-	j = 0;
-	while (format && format[j])
+	i = 0;
+	while (format && format[i])
 	{
-		if (!first)
-			printf(",");
-		switch (format[j])
+		if (format[i] == 'c')
 		{
-			case 'c':
-				c = va_arg(args, int);
-				printf("%c", c);
-				break;
-			case 'f':
-				f = (float)va_arg(args, double);
-				printf("%f", f);
-				break;
-			case 'i':
-				i = va_arg(args, int);
-				printf("%d", i);
-				break;
-			case 's':
-				s = va_arg(args, char *);
-				if (s == NULL)
-					printf("%s", "(nil)");
-				else
-					printf("%s", s);
-				break;
-			default:
-				break;
+			printf("%c", va_arg(args, int));
 		}
-		first = 0;
-		j++;
+		else if (format[i] == 'f')
+		{
+			printf("%f", va_arg(args, double));
+		}
+		else if (format[i] == 'i')
+		{
+			printf("%d", va_arg(args, int));
+		}
+		else if (format[i] == 's')
+		{
+			s = va_arg(args, char *);
+			if (s == NULL)
+				printf("%s", "(nil)");
+			else
+				printf("%s", s);
+		}
+		i++;
+		if (format[i])
+		{
+			printf(", ");
+		}
 	}
 	va_end(args);
 	printf("\n");
