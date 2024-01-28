@@ -51,7 +51,3 @@ int _printf(const char *format, ...)
 	}
 	return (count);
 }
-#define STDOUT_FILENO 1
-void _putchar(char c) {
-    write(STDOUT_FILENO, &c, 1);
-}
