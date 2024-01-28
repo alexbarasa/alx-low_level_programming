@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <unistd.h>
-void _putchar(char c);
 #include "main.h"
 /**
  * _printf - Prints output acording to the passed format
