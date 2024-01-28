@@ -1,4 +1,10 @@
 #include <unistd.h>
-void _putchar(char c) {
-    write(1, &c, 1);
+/**
+ * _putchar - Prints the given characters
+ *
+ * @c: Character pinter
+ */
+void _putchar(char c)
+{
+	write(1, &c, 1);
 }
