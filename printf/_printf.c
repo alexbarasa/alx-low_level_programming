@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include <stdarg.h>
-int _putchar(char c);
+#include "main.h"
 /**
  * _printf - Prints output acording to the passed format
  *
@@ -49,16 +48,4 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	return (count);
-
 }
-/**
- * _putchar - Prints the given characters
- *
- * @c: Character pinter
- * Return: The string charcters
- */
-int _putchar(char c)
-{
-        return (putchar(c));
-}
-
