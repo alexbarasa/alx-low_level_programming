@@ -3,7 +3,7 @@
 #include "lists.h"
 #include <string.h>
 /**
- * add_node_end - Prints the added node
+ * add_node - Prints the added node
  *
  * @head: Starting node
  * @str: String pointer
