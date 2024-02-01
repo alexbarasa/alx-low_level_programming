@@ -13,3 +13,4 @@ _start:
     mov rax, 60        ; System call number for exit
     xor rdi, rdi       ; Clear rdi (exit code 0)
     syscall            ; Call kernel
+
