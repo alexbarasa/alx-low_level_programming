@@ -7,7 +7,7 @@
  * @h: Pointer to the nodes memory
  * Return: Number of nodes in the list
  */
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 	const listint_t *current = h;
 	size_t len = 0;
