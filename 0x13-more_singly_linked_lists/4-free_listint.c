@@ -5,7 +5,7 @@
  *
  * @head: Pointer to the head of the list
  */
-void free_listint(list_t *head)
+void free_listint(listint_t *head)
 {
 	list_t *current, *temp;
 
