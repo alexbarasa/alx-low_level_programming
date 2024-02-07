@@ -1,7 +1,8 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
-/*get_nodeint_at_index - Gets the node at a specified index
+/**
+ * get_nodeint_at_index - Gets the node at a specified index
  *
  * @head: The head pointer
  * @index: The index of the node to be returned
