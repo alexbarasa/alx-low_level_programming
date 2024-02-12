@@ -21,8 +21,10 @@ void print_error_and_exit(int code, const char *message)
  */
 void print_elf_header_info(Elf64_Ehdr *header)
 {
+	int i;
+
 	printf("  Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 		printf(" %02x", header->e_ident[i]);
 	printf("\n");
 	printf("Class: %s\n", header->e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "ELF32");
@@ -52,7 +54,7 @@ void print_elf_header_info(Elf64_Ehdr *header)
 			printf("<unknown: %x>\n", header->e_type);
 			break;
 	}
-	printf("Entry point address:  0x%llx\n", (unsigned long long)header->e_entry);
+	printf("Entry point address:  0x%lx\n", (unsigned long)header->e_entry);
 }
 /**
  * main - Entry point of the program
@@ -63,14 +65,14 @@ void print_elf_header_info(Elf64_Ehdr *header)
  */
 int main(int argc, char *argv[])
 {
-	if (argc != 2)
-		print_error_and_exit(98, "Usage: elf_header elf_filename");
-	int fd = open(argv[1], O_RDONLY);
-
-	if (fd == -1)
-		print_error_and_exit(98, "Error: Cannot open file");
+	int fd;
 	Elf64_Ehdr header;
 
+	if (argc != 2)
+		print_error_and_exit(98, "Usage: elf_header elf_filename");
+	fd = open(argv[1], O_RDONLY);
+	if (fd == -1)
+		print_error_and_exit(98, "Error: Cannot open file");
 	if (read(fd, &header, sizeof(header)) != sizeof(header))
 		print_error_and_exit(98, "Error: Cannot read ELF header");
 	if (header.e_ident[EI_MAG0] != ELFMAG0 ||
