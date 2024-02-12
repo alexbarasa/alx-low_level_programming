@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 /**
  * create_file - Creates a file with the specified content
  * @filename: Name of the file to create
