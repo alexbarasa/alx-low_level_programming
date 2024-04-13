@@ -47,8 +47,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node->value == NULL)
 	{
 		free(new_node->key);
-        free(new_node);
-	return (0);
+		free(new_node);
+		return (0);
 	}
 	/* Add the new node at the beginning of the list */
 	new_node->next = ht->array[index];
