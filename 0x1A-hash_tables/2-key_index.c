@@ -1,3 +1,4 @@
+#include "hash_table"
 /**
  * key_index - Calculates the index of a key in the hash table array
  * @key: The key
