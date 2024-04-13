@@ -1,5 +1,6 @@
 #include <string.h>
 #include "hash_tables.h"
+#include <stdlib.h>
 /**
  * hash_table_set - Adds an element to the hash table
  * @ht: The hash table to add/update the key/value pair
@@ -10,10 +11,12 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	hash_node_t *new_node, *tmp;
+	unsigned long int index;
+
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
-	unsigned long int index = key_index((unsigned char *)key, ht->size);
-	hash_node_t *new_node, *tmp;
+	index = key_index((unsigned char *)key, ht->size);
 	/* Check if key already exists in the hash table */
 	tmp = ht->array[index];
 	while (tmp != NULL)
