@@ -1,4 +1,4 @@
-#include "php_hash_table.h"
+#include "hash_tables.h"
 
 #include <stdlib.h>
 #include <stdio.h>
